@@ -34,9 +34,19 @@ int main() {
 	// Call Functions // 
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+
+	// Render // 
 	while (!glfwWindowShouldClose(window))
 	{
 		processInput(window);
+
+		// Render Command Must Be Here //
+		// Change Window Color //
+
+		glClear(GL_COLOR_BUFFER_BIT);
+		glClearColor(0.2f, 0.4f,0.3f,1.0f);
+
+		
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
