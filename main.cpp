@@ -1,4 +1,4 @@
-// Next Rendering Chapter //
+// Next Hello Triangle Chapter //
 
 #include <iostream>
 #include <glad/glad.h>
@@ -56,13 +56,12 @@ int main() {
 	return 0;
 }
 
-
-// Size of Screen
+// PROTOTYPE OF FUNCTION //
+// Changes Size of Screen
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-	glViewport(0,0,width,height);
+	glViewport(0, 0, width, height);
 }
-
 
 // Input Key Escape
 void processInput(GLFWwindow* window)
