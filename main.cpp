@@ -1,4 +1,4 @@
-// Next Input Chapter //
+// Next Rendering Chapter //
 
 #include <iostream>
 #include <glad/glad.h>
@@ -7,6 +7,7 @@
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void processInput(GLFWwindow* window);
 
 int main() {
 	/*std::cout << "HellO!";*/
@@ -35,6 +36,7 @@ int main() {
 
 	while (!glfwWindowShouldClose(window))
 	{
+		processInput(window);
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
@@ -49,4 +51,12 @@ int main() {
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 	glViewport(0,0,width,height);
+}
+
+
+// Input Key Escape
+void processInput(GLFWwindow* window)
+{
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, true);
 }
